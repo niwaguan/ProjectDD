@@ -6,6 +6,8 @@ body{font-size: 14px;font-family:Helvetica Neue,Helvetica,microsoft yahei,sans-s
 
 .content{
     height: 100%;
+    max-width: 500px;
+    min-width: 420px;
     position: relative;
     margin: 0 auto;
 }
@@ -130,7 +132,7 @@ footer{
     position: relative;
 }
 .index-lines .line{
-    padding: 5px 0;
+    padding: 10px 0;
     margin-bottom: 5px;
     clear: both;
     overflow: hidden;
@@ -252,7 +254,7 @@ footer{
     line-height: 30px;
 }
 .my-top .box a{
-    padding: 0px 20px;
+    padding: 0 20px;
     line-height: 30px;
     border-radius: 5px;
     background-color: #006DB8;
