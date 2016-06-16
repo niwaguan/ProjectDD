@@ -1,0 +1,286 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+html,body{height: 100%;-webkit-user-select: none;}
+html{font-size: 100px;}
+a{text-decoration: none;color: white;-webkit-tap-highlight-color: rgba(255,0,0,0);}
+body{font-size: 14px;font-family:Helvetica Neue,Helvetica,microsoft yahei,sans-serif;}
+
+.content{
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 44px;
+    color: white;
+    font-size: .17rem;
+    background-color: #006DB8;
+}
+.back-icon{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    transform: translateY(-50%);
+}
+.main {
+    width: 100%;
+    position: absolute;
+    top: 44px;
+    bottom: 49px;
+    overflow: auto;
+    background-color: #f5f5f5;
+}
+.dynamic-pic{width: 100%;max-width: 100%;vertical-align: middle}
+footer{
+    width: 100%;
+    height: 49px;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+}
+.footer-items{
+    position: relative;
+    color: white;
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+}
+.footer-items .item{
+    display: block;
+    float: left;
+    width: 20%;
+    padding-top: 5px;
+}
+.footer-items .item span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 2px auto;
+    background-size: cover;
+}
+.footer-items .item.active{
+    color: #FF0504;
+}
+.footer-items a:nth-child(1) span{
+    background-image:url("../images/nav10.png");
+}.footer-items a:nth-child(2) span{
+    background-image:url("../images/nav20.png");
+}.footer-items a:nth-child(3) span{
+    background-image:url("../images/nav30.png");
+}.footer-items a:nth-child(4) span{
+    background-image:url("../images/nav40.png");
+}.footer-items a:nth-child(5) span{
+    background-image:url("../images/nav50.png");
+}
+.footer-items a:nth-child(1).active span{
+    background-image:url("../images/nav11.png");
+}.footer-items a:nth-child(2).active span{
+    background-image:url("../images/nav21.png");
+}.footer-items a:nth-child(3).active span{
+    background-image:url("../images/nav31.png");
+}.footer-items a:nth-child(4).active span{
+    background-image:url("../images/nav41.png");
+}.footer-items a:nth-child(5).active span{
+    background-image:url("../images/nav51.png");
+}
+
+ /*首页*/
+.index-img-list{
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+.index-img-list .images{
+    width: 300%;
+    clear: both;
+    overflow: hidden;
+    transition: transform 1s;
+}
+.index-img-list .images img{
+    width: 33.3333%;
+    max-width: 33.3333%;
+    display: block;
+    float: left;
+}
+.index-img-list .controls{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    clear: both;
+    overflow: hidden;
+}
+.index-img-list .controls span{
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: #666;
+    border-radius: 50%;
+}
+.index-img-list .controls .active{
+    background-color: white;
+}
+.index-lines{
+    position: relative;
+}
+.index-lines .line{
+    padding: 5px 0;
+    margin-bottom: 5px;
+    clear: both;
+    overflow: hidden;
+    background-color: white;
+}
+.index-lines .line .item{
+    width: 33.333333%;
+    float: left;
+    text-align: center;
+}
+.index-lines .line .item img{
+    display: block;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto;
+}
+/*创业项目*/
+.project-tabs-mar {
+    top: 84px;
+}
+.project-tabs {
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    background-color: #f5f5f5;
+}
+.project-tabs *{
+    display: block;
+    float: left;
+    width: 33.333333%;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+}
+.project-tabs .active{
+    color: #006DB8;
+    background-color: white;
+}
+.project-plans {
+    display: none;
+    margin-bottom: 5px;
+}
+.project-plans.active {
+    display: block;
+}
+.project-plans.none {
+    display: none;
+}
+.project-plans .white-bg {
+    background-color: white;
+}
+.project-plans .pad-10{
+    padding: 10px 0;
+}
+.project-plans .title,.project-plans .bottom{
+    padding: 10px 0;
+    text-align: center;
+}
+.project-plans .title {
+    font-size: .16rem;
+}
+.project-plans .bottom,.project-plans .content{
+    font-size: .1rem;
+    color: #999;
+}
+.project-plans .content{
+    padding-left: 25px;
+    padding-bottom: 5px;
+}
+/*报名流程*/
+.process-mar-20{
+    margin: 20px 0;
+}
+/*平台风采*/
+.platform-content{
+}
+.platform-content .title{
+    margin: 10px 0;
+    padding-bottom: 5px;
+    font-size: .16rem;
+    color: #FF0504;
+    border-bottom: solid #ccc 1px;
+}
+.platform-content .company-name{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.platform-content .company-sum{
+    line-height: 2;
+    font-size: .12rem;
+    color: #333;
+}
+.platform-content .title,.platform-content .company-name,.platform-content .company-sum{
+    margin-left: 10px;
+}
+/*我的滴滴*/
+.my-top {
+    height: 200px;
+    position: relative;
+    background-image: url("../images/banner5.png");
+    background-size: cover;
+}
+.my-top .box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.my-top .box img{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+.my-top .box *{
+    display: block;
+    text-align: center;
+}
+.my-top .box p{
+    line-height: 30px;
+}
+.my-top .box a{
+    padding: 0px 20px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-color: #006DB8;
+}
+.my-lines {
+    position: relative;
+    padding: 0 20px 10px;
+}
+.my-lines .aline{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    padding: 15px 60px ;
+    background-color: white;
+    border-radius: 5px;
+    text-align: left;
+    color: #333;
+}
+.my-lines .aline .img-header {
+    width: 25px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.my-lines .aline .img-tail {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
