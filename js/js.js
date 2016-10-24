@@ -63,3 +63,6 @@ function loadURL(url) {
     iFrame.parentNode.removeChild(iFrame);
     iFrame = null;
 }
+function invokeOC(){
+    window.webkit.messageHandlers.invokeOC.postMessage({"title":"123"});
+}
