@@ -50,7 +50,7 @@ function change(e) {
 }
 
 function loadURL(url) {
-	url = url.replace("https","goyaya");
+	url = url.replace("https","goyayaimg");
     var iFrame;
     iFrame = document.createElement("iframe");
     iFrame.setAttribute("src", url);
