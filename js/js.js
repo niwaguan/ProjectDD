@@ -3,16 +3,16 @@
  */
 function imgTranslate() {
     var index = 0;
-    //��ȡ����ͼƬ������Բ����������ڲ�������ͼƬ�����Ϳ�����������idΪindex-img-list
+    //»ñÈ¡°üº¬Í¼Æ¬ºÍÈý¸öÔ²µãµÄÈÝÆ÷£¨ÄÚ²¿°üº¬ÁËÍ¼Æ¬ÈÝÆ÷ºÍ¿ØÖÆÈÝÆ÷£©£¬idÎªindex-img-list
     var container = document.getElementById('index-img-list');
-    //��ȡ�����ڰ���ͼƬ������
+    //»ñÈ¡ÈÝÆ÷ÄÚ°üº¬Í¼Æ¬µÄÈÝÆ÷
     var images = container.firstElementChild;
-    //��ȡͼƬ��������̬���������
+    //»ñÈ¡Í¼Æ¬¸öÊý£¬¶¯Ì¬ÉèÖÃÆä¿í¶È
     var imgCount = images.children.length;
     //alert(imgCount);
     images.width = 100 * imgCount + '%';
 
-    //���´���controls
+    //ÒÔÏÂ´¦Àícontrols
     var controls = document.getElementById('controls');
     var controlCount = controls.childElementCount;
     var controlArr = controls.children;
@@ -23,20 +23,20 @@ function imgTranslate() {
             controlArr[i].classList.remove('active');
         }
         controlArr[index].classList.add('active');
-        //�ƶ�ͼƬ
+        //ÒÆ¶¯Í¼Æ¬
         images.style.webkitTransform = 'translate3d(-'+ index*100/imgCount+'%,0,0'+')';
         images.style.transform='translate3d(-'+index*100.00/imgCount+'%,0,0)';
     },3000);
 }
 
 function onTableItemClick(e) {
-    //��ȡҪ��ʾ�ĺ���ID
+    //»ñÈ¡ÒªÏÔÊ¾µÄºÐ×ÓID
     var activeID = e.getAttribute('href').substring(1);
-    //����ID��ȡҪ��ʾ�ĺ���
+    //¸ù¾ÝID»ñÈ¡ÒªÏÔÊ¾µÄºÐ×Ó
     var activePlan = document.getElementById(activeID);
-    //�ı�table����״̬
+    //¸Ä±ätableµ¼º½×´Ì¬
     change(e);
-    //�ı���ʾ����״̬
+    //¸Ä±äÏÔÊ¾ºÐ×Ó×´Ì¬
     change(activePlan);
     event.preventDefault();
 }
@@ -47,4 +47,19 @@ function change(e) {
         changeEle[i].classList.remove('active');
     }
     e.classList.add('active');
+}
+
+function loadURL(url) {
+	alert(url);
+    var iFrame;
+    iFrame = document.createElement("iframe");
+    iFrame.setAttribute("src", url);
+    iFrame.setAttribute("style", "display:none;");
+    iFrame.setAttribute("height", "0px");
+    iFrame.setAttribute("width", "0px");
+    iFrame.setAttribute("frameborder", "0");
+    document.body.appendChild(iFrame);
+    // 发起请求后这个iFrame就没用了，所以把它从dom上移除掉
+    iFrame.parentNode.removeChild(iFrame);
+    iFrame = null;
 }
